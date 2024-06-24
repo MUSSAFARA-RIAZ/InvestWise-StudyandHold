@@ -1,0 +1,36 @@
+.home-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  
+  
+  .main-heading {
+    color: red;
+    margin-left: 10px; /* No additional margin needed since padding is added to the main content */
+    border: 2px solid green;
+  }
+  .main-content.scrollable-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 50px); /* Adjust according to your layout */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional styling */
+  }
+  
+  .containerddd {
+    margin-bottom: 20px;
+  }
+  
+  .result {
+    white-space: pre-wrap; /* Ensures the preformatted text wraps */
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional styling */
+    background: #f9f9f9; /* Optional styling */
+  }
+  .scrollable-content {
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 400px; /* Adjust as needed */
+  }
+    
