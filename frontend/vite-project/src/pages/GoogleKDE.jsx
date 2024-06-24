@@ -72,7 +72,7 @@ export default function GoogleKDE() {
       <Sidebar className="sidebar" />
       <div className="main-content">
         <h1 className="main-heading">Monte Carlo Simulations for Google Data</h1>
-        <button className="click-btn btn-style510" onClick={runSimulation}>
+        <button className="click-btn btn-style510" style={{marginLeft:"30px"}}  onClick={runSimulation}>
           Run Simulation
         </button>
         <div className="containerddd">

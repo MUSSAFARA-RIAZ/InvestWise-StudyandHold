@@ -68,7 +68,7 @@ const runSimulation = async () => {
       <Sidebar className="sidebar" />
       <div className="main-content">
         <h1 className="main-heading">Monte Carlo Simulations for Apple Data Data</h1>
-    <button className="click-btn btn-style510" style={{marginLeft:"50px"}} onClick={runSimulation}>Run Simulation</button>
+    <button className="click-btn btn-style510" style={{marginLeft:"30px"}} onClick={runSimulation}>Run Simulation</button>
         <div className="containerddd">
           <div className='button-container'>
             <div className='buttons-wrapper'>
