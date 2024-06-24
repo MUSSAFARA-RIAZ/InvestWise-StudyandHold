@@ -1,10 +1,7 @@
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
- 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +13,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -44,9 +42,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -57,26 +57,15 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+  
   a:hover {
     color: #747bff;
   }
+  
   button {
     background-color: #f9f9f9;
   }
-} */
-
-
-/* body {
-   overflow: hidden; 
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    text-align: center;
 }
-
-#root {
-  width: 100%;
-  height: 100%;
-} */
 
 .sidebar {
   min-height: 100%;
@@ -92,7 +81,7 @@ button:focus-visible {
 }
 
 .sidebar.expanded {
-  width: 20%;
+  width: 40%;
 }
 
 .boxicon-container {
@@ -101,9 +90,8 @@ button:focus-visible {
   justify-content: flex-start;
   cursor: pointer;
   position: relative;
-  background-color: #9fdade;
+  /* background-color: #9fdade; */
 }
-
 
 .boxicon {
   margin: 0.8rem;
@@ -112,23 +100,12 @@ button:focus-visible {
   background: transparent;
 }
 
-.first-and-last-trash-fix {
-  margin: 0.8rem;
+.hamburger {
+  color: white;
 }
 
-.active::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 95%;
-  background-color: #373737;
-  opacity: 1;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -0.25rem;
-  border-top-right-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
+.first-and-last-trash-fix {
+  margin: 0.8rem;
 }
 
 .boxicon::after {
@@ -136,7 +113,7 @@ button:focus-visible {
   position: absolute;
   width: 100%;
   height: 95%;
-  background-color: #373737;
+  background-color: #a4cdcc;
   opacity: 0;
   z-index: -1;
   top: 50%;
@@ -173,10 +150,6 @@ button:focus-visible {
   margin: 0;
   color: #276767;
   transition: 0.2s opacity;
-}
-
-.active-description {
-  color: white;
 }
 
 .show-description {

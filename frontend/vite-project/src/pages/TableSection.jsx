@@ -1,7 +1,8 @@
 import "./Table.css";
-import numberOne from '../../assets/numberOne.svg'
-import numberTwo from '../../assets/numberTwo.svg'
-import numberThree from '../../assets/numberThree.svg'
+import numberOne from '../assets/numberOne.svg'
+import numberTwo from '../assets/numberTwo.svg'
+import numberThree from '../assets/numberThree.svg'
+import Sidebar from "../Components/Sidebar";
 
 const googleData = [
   {
@@ -150,6 +151,11 @@ const etfData = [
 
 export default function TableSection() {
   return (
+    <div style={{display:"flex",flexDirection:"row"}}>
+
+   
+    <Sidebar/>
+    <div>
     <section>
       <div className="dataset_description">
         <h1 className="datasetDescription_h1">
@@ -325,5 +331,7 @@ export default function TableSection() {
         </div>
       </div>
     </section>
+    </div>
+    </div>
   );
 }

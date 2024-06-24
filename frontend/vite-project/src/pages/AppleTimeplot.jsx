@@ -69,7 +69,7 @@ export default function ApplePlotTime() {
     <div className="page-container">
       <Sidebar className="sidebar" />
       <div className="main-content">
-        <h1 className="main-heading">Monte Carlo Simulations for ETF Data</h1>
+        {/* <h1 className="main-heading">Monte Carlo Simulations for Apple Data</h1> */}
         <div className="containerddd">
           <div className='button-container'>
             <div className='buttons-wrapper'>

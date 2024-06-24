@@ -14,6 +14,7 @@ import AppleHistrogram from './pages/AppleHistrogram';
 import ApplePlotTime from './pages/AppleTimeplot';
 import ETFKDE from './pages/ETFKDE';
 import Home from './pages/Home'
+import TableSection from './pages/TableSection';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       {/* <Sidebar />  */}
       <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/tables" element={<TableSection/>}/>
         <Route path="/home" element={<ETFKDE/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/ETFplottime" element={<Messages />} />
