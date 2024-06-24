@@ -71,8 +71,8 @@ export default function GoogleKDE() {
     <div className="page-container">
       <Sidebar className="sidebar" />
       <div className="main-content">
-        <h1 className="main-heading">Monte Carlo Simulations for ETF Data</h1>
-        <button className="btn" onClick={runSimulation}>
+        <h1 className="main-heading">Monte Carlo Simulations for Google Data</h1>
+        <button className="click-btn btn-style510" onClick={runSimulation}>
           Run Simulation
         </button>
         <div className="containerddd">

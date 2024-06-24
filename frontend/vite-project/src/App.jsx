@@ -23,8 +23,8 @@ function App() {
       <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<ETFKDE/>} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/resources" element={<Resources />} />
+        <Route path="/ETFplottime" element={<Messages />} />
+        <Route path="/ETFhistrogram" element={<Resources />} />
         <Route path='/google' element={<GoogleKDE/>}/>
         <Route path='/googleplottime' element={<GooglePlotTime/>}/>
         <Route path="/googlehistrogram" element={<GooglePlotHistrogram/>}/>

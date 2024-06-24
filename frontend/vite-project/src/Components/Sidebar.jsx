@@ -40,8 +40,8 @@ const Sidebar = () => {
     { name: "Invest Wise", icon:  <HomeIcon />, path:"/" },
     { name: "ETFKDE", icon: <InsightsSharp/>, path: "/home" },
    
-    { name: "ETFPlotTime", icon: <AnalyticsOutlined/>, path: "/messages" },
-    { name: "ETFHistrogram", icon: <AssessmentOutlined/>, path: "/resources" },
+    { name: "ETFPlotTime", icon: <AnalyticsOutlined/>, path: "/ETFplottime" },
+    { name: "ETFHistrogram", icon: <AssessmentOutlined/>, path: "/ETFhistrogram" },
     { name: "GoogleKDE", icon: <Google/>, path: "/google" },
     { name: "GooglePlotTime", icon: <Google/>, path: "/googleplottime" },
     {name:"GoogleHistrogram", icon: <Google/>, path: "/googlehistrogram"},
