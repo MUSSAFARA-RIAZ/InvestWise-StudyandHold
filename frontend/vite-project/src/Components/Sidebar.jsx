@@ -31,7 +31,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   let menuItems = [
-    { name: "Invest Wise", icon: <MenuIcon />, path:"/" },
+    { name: "Invest Wise", icon:  <HomeIcon />, path:"/" },
     { name: "ETFKDE", icon: <HomeIcon />, path: "/home" },
    
     { name: "ETFPlotTime", icon: <MailIcon />, path: "/messages" },

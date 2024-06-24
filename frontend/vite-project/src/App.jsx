@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Sidebar from './Components/Sidebar';
-import Home from './pages/Home';
+// import Home from './pages/ETFKDE';
 import Explore from './pages/Explore';
 import Messages from './pages/Messages';
 import Resources from './pages/Resources';
@@ -12,6 +12,8 @@ import GooglePlotHistrogram from './pages/GooglePlotHistrogram';
 import AppleKDE from './pages/AppleKDE';
 import AppleHistrogram from './pages/AppleHistrogram';
 import ApplePlotTime from './pages/AppleTimeplot';
+import ETFKDE from './pages/ETFKDE';
+import Home from './pages/Home'
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
       {/* <Sidebar />  */}
       <Routes>
       <Route path="/" element={<Home/>}/>
-        <Route path="/home" element={<Home/>} />
+        <Route path="/home" element={<ETFKDE/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/resources" element={<Resources />} />

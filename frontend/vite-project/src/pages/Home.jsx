@@ -1,99 +1,72 @@
-import React, { useState } from 'react';
-import Sidebar from '../Components/Sidebar';
-import '../../src/index.css'; // Assuming you create a Home.css file for styles
+import "./Home.css";
+import heroImage1 from "../assets/heroImg1.svg";
+import heroImage2 from "../assets/heroImg1.svg";
+import heroImage3 from "../assets/heroImg1.svg";
+import MonteCarlo from "./MonteCarlo.jsx";
+// import MonteCarlo from "../MonteCarlo/MonteCarlo";
+import TableSection from './TableSection.jsx'
+import "../../src/script.js"
+// import Sidebar from "../Components/Sidebar.jsx";
+// import '../../src/index.css';
+
 
 export default function Home() {
-  const [kdePlot, setKdePlot] = useState(null);
-  const [description, setDescription] = useState('');
-
-  const descriptions = {
-    sde_gbm: (
-      <ul>
-        
-        <li><strong>Most Likely Outcome:</strong> The KDE plot indicates that the most likely final outcome of the investment is around the peak of the curve.</li>
-<li><strong>Distribution Spread:</strong> The plot displays a right-skewed distribution, with a high density around the peak and a long tail extending towards higher values, suggesting the potential for higher but less probable investment returns.</li>
-<li><strong>Volatility:</strong> The shape and spread of the KDE curve suggest considerable volatility, highlighting significant uncertainty in the predicted investment outcomes and indicating the presence of both moderate and extreme potential results.</li>
-
-
-        {/* <li><strong>Analysis:</strong> Peaks in the KDE plot indicate higher likelihood of certain final prices, offering a clear visual representation of potential investment outcomes.</li> */}
-      </ul>
-    ),
-    analytic_exp_gbm: (
-      <ul>
-       <li><strong>Most Likely Outcome:</strong> The KDE plot indicates that the most likely final outcome of the investment is around the peak of the curve.</li>
-<li><strong>Distribution Spread:</strong> The plot displays a right-skewed distribution, with a high density around the peak and a long tail extending towards higher values, suggesting the potential for higher but less probable investment returns.</li>
-<li><strong>Volatility:</strong> The shape and spread of the KDE curve suggest moderate volatility, highlighting some uncertainty in the predicted investment outcomes and indicating the presence of both moderate and extreme potential results.</li>
-
-      </ul>
-    ),
-    analytic: (
-      <ul>
-
-
-<li><strong>Most Likely Outcome:</strong> The KDE plot indicates that the most likely final outcome of the investment is around the peak of the curve.</li>
-<li><strong>Distribution Spread:</strong> The plot displays a right-skewed distribution, with a high density around the peak and a long tail extending towards higher values, suggesting the potential for higher but less probable investment returns.</li>
-<li><strong>Volatility:</strong> The shape and spread of the KDE curve suggest considerable volatility, highlighting significant uncertainty in the predicted investment outcomes and indicating the presence of both moderate and extreme potential results.</li>
-
-      </ul>
-    )
-  };
-
-  const plotKDE = async (model) => {
-    try {
-      const response = await fetch(`/api/plot-kde?model=${model}`);
-      console.log("response", response)
-      const blob = await response.blob();
-      console.log("blob in home", blob)
-      setKdePlot(URL.createObjectURL(blob));
-      setDescription(descriptions[model]);
-    } catch (error) {
-      console.error('Error fetching KDE plot:', error);
-      // Handle error if fetching or processing fails
-    }
-  };
-  console.log(kdePlot)
-  const runSimulation = async () => {
-    try {
-      const response = await fetch('api/run-simulation', { method: 'POST' });
-      if (response.ok) {
-        const resultText = await response.text();
-        const result = resultText ? JSON.parse(resultText) : {};
-        console.log(result);
-      } else {
-        console.error('Simulation failed:', response.status, response.statusText);
-      }
-    } catch (error) {
-      console.error('Error running simulation:', error);
-    }
-  };
   return (
-    <div className="page-container">
-      <Sidebar className="sidebar" />
-      <div className="main-content">
-        <h1 className="main-heading">Monte Carlo Simulations for ETF Data</h1>
-        <button className="btn" onClick={runSimulation}>Run Simulation</button>
-        <div className="containerddd">
-          <div className='button-container'>
-            <div className='buttons-wrapper'>
-              <button className="click-btn btn-style510" onClick={() => plotKDE('sde_gbm')}>Plot KDE (SDE GBM)</button>
-            </div>
-            <div className='buttons-wrapper'>
-              <button className="click-btn btn-style510" onClick={() => plotKDE('analytic_exp_gbm')}>Plot KDE (Analytic Exp GBM)</button>
-            </div>
-            <div className='buttons-wrapper'>
-              <button className="click-btn btn-style510" onClick={() => plotKDE('analytic')}>Plot KDE (Analytic)</button>
-            </div>
+    <>
+  
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="tagline">
+            Invest Today, Prosper Tomorrow: Embrace the Future with Buy and Hold
+            <span role="img" aria-label="temple">
+              🏛️
+            </span>
           </div>
-          {kdePlot && (
-            <div className="graph-container">
-              <img id="kde-plot" className="result" alt="KDE Plot" src={kdePlot} />
-              <div className="description-container">
-                {description}
-              </div>
-            </div>
-          )}
+          <h1>
+            Invest Wise: <span className="lineBreak">Buy and Hold.</span>
+          </h1>
+          <p className="reveal">
+            Discover the power of patience with our Buy and Hold investment
+            strategy. By focusing on long-term growth, you can ride out market
+            fluctuations and steadily increase your wealth. Trust in proven
+            methods and expert insights to secure a prosperous financial future.
+            Start investing today and watch your wealth flourish over time.
+          </p>
         </div>
-      </div>
-    </div>
+        <div className="hero-image reveal">
+          <figure className="snip1401">
+            <img src={heroImage1} alt="Hero Image1" />
+            <figcaption>
+              <h3>Steady Growth</h3>
+              <p>
+                Invest for the long term to experience consistent and reliable
+                growth.
+              </p>
+            </figcaption>
+          </figure>
+          <figure className="snip1401">
+            <img src={heroImage2} alt="Hero Image2" />
+            <figcaption>
+              <h3>Market Resilience</h3>
+              <p>
+                Weather market fluctuations with a strategy designed for
+                stability.
+              </p>
+            </figcaption>
+          </figure>
+          <figure className="snip1401">
+            <img src={heroImage3} alt="Hero Image3" />
+            <figcaption>
+              <h3>Expert Insights</h3>
+              <p>
+                Leverage proven methods and expert advice for optimal returns.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <MonteCarlo />
+      <TableSection />
+    </>
   );
 }
