@@ -1,7 +1,7 @@
 import "./Table.css";
-import numberOne from '../assets/numberOne.svg'
-import numberTwo from '../assets/numberTwo.svg'
-import numberThree from '../assets/numberThree.svg'
+import numberOne from '../../assets/numberOne.svg'
+import numberTwo from '../../assets/numberTwo.svg'
+import numberThree from '../../assets/numberThree.svg'
 
 const googleData = [
   {

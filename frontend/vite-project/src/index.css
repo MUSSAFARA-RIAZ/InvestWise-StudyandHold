@@ -1,35 +1,94 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  box-sizing: border-box;
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+ 
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+/* body {
+   overflow: hidden; 
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 #root {
   width: 100%;
   height: 100%;
-}
+} */
 
 .sidebar {
   min-height: 100%;
-  height: 100%;
+  height: 100vh;
   width: 6.2rem;
-  background-color: #314455;
+  background-color: #4a9195;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   transition: 0.3s width;
-  color: whitesmoke;
+  color: rgb(227, 227, 227);
 }
 
 .sidebar.expanded {
@@ -42,12 +101,15 @@ body {
   justify-content: flex-start;
   cursor: pointer;
   position: relative;
+  background-color: #9fdade;
 }
+
 
 .boxicon {
   margin: 0.8rem;
   animation-iteration-count: 1;
   z-index: 2;
+  background: transparent;
 }
 
 .first-and-last-trash-fix {
@@ -100,6 +162,7 @@ body {
 }
 
 .description {
+  background: transparent;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -108,7 +171,7 @@ body {
   z-index: 10;
   font-weight: bold;
   margin: 0;
-  color: #e9eaea;
+  color: #276767;
   transition: 0.2s opacity;
 }
 
@@ -152,7 +215,7 @@ body {
 /* Page styling */
 .page-container {
   display: flex;
-  height: 1000vh;
+  height: 100%;
   scrollbar-width: 10px;
 }
 

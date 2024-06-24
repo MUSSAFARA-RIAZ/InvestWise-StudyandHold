@@ -7,6 +7,12 @@ import {
   Explore as ExploreIcon,
   Mail as MailIcon,
   Description as DescriptionIcon,
+  Google,
+  Apple,
+  GraphicEq,
+  InsightsSharp,
+  AssessmentOutlined,
+  AnalyticsOutlined,
   
 } from '@mui/icons-material';
 import '../../src/index.css';
@@ -32,16 +38,16 @@ const Sidebar = () => {
 
   let menuItems = [
     { name: "Invest Wise", icon:  <HomeIcon />, path:"/" },
-    { name: "ETFKDE", icon: <HomeIcon />, path: "/home" },
+    { name: "ETFKDE", icon: <InsightsSharp/>, path: "/home" },
    
-    { name: "ETFPlotTime", icon: <MailIcon />, path: "/messages" },
-    { name: "ETFHistrogram", icon: <DescriptionIcon />, path: "/resources" },
-    { name: "GoogleKDE", icon: <DescriptionIcon />, path: "/google" },
-    { name: "GooglePlotTime", icon: <ExploreIcon />, path: "/googleplottime" },
-    {name:"GoogleHistrogram", icon: <ExploreIcon />, path: "/googlehistrogram"},
-    {name:"AppleKDE", icon: <ExploreIcon />, path: "/apple"},
-    {name:"appleHistrogram", icon: <ExploreIcon />, path: "/applehistrogram"},
-    {name:"applePlotTime", icon: <ExploreIcon />, path: "/applePlotTime"},
+    { name: "ETFPlotTime", icon: <AnalyticsOutlined/>, path: "/messages" },
+    { name: "ETFHistrogram", icon: <AssessmentOutlined/>, path: "/resources" },
+    { name: "GoogleKDE", icon: <Google/>, path: "/google" },
+    { name: "GooglePlotTime", icon: <Google/>, path: "/googleplottime" },
+    {name:"GoogleHistrogram", icon: <Google/>, path: "/googlehistrogram"},
+    {name:"AppleKDE", icon: <Apple/>, path: "/apple"},
+    {name:"appleHistrogram", icon: <Apple />, path: "/applehistrogram"},
+    {name:"applePlotTime", icon: <Apple/>, path: "/applePlotTime"},
 
 
     // { name: "Starred", icon: <StarIcon />, path: "/starred" },
